@@ -100,7 +100,7 @@ class AIOGraphite:
             self._reader, self._writer = await asyncio.open_connection(
                 self._graphite_server,
                 self._graphite_port,
-                loop=self.loop)
+                )
         except Exception:
             raise AioGraphiteSendException(
                 "Unable to connect to the provided server address %s:%s"
